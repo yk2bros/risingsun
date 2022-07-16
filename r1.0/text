@@ -1,0 +1,6 @@
+real = ATR(high, low, close, timeperiod=14)
+
+
+Up = (high + low / 2) +  ( multiplier  x  ATR)
+
+Down = (high + low) / 2 – multiplier x ATR
