@@ -1,0 +1,89 @@
+# flag = False
+# index = 0
+# quantity = 0
+# for index in range(len(CLOSE_VALUES)):
+#
+#     if  repository.get_supertrend(dataframe_data, 3, 3)["Supertrend"][index] and CLOSE_VALUES[
+#         index] > repository.get_dema(repository.list_to_numpy_array(CLOSE_VALUES),
+#                                      dema_time_period)[index] :
+#         print("buy")
+#         flag = True
+#     elif not repository.get_supertrend(dataframe_data,3,3)["Supertrend"][index] :
+#         print("sell")
+#         flag = False
+
+
+# to print the DEMA values
+# print(repository.get_dema(repository.list_to_numpy_array(CLOSE_VALUES), dema_time_period ).tolist())
+# print(repository.get_dema_last_value(repository.list_to_numpy_array(CLOSE_VALUES), dema_time_period ))
+
+
+# to print the supertrend values
+# print((repository.get_supertrend((dataframe_data),3,3))["Supertrend"][0])
+# print(len(CLOSE_VALUES))
+
+# for index in range(len(CLOSE_VALUES)):
+#     print(index)
+#     if repository.get_supertrend(dataframe_data, 3, 3)["Supertrend"][index] and CLOSE_VALUES[
+#         index] > repository.get_dema(repository.list_to_numpy_array(CLOSE_VALUES),
+#                                      dema_time_period)[index]:
+#         print("Buy")
+#         for j in range(index+1,len(CLOSE_VALUES)):
+#             print(j)
+#             if not repository.get_supertrend(dataframe_data,3,3)["Supertrend"][index]:
+#                 print("Sell")
+
+# This is a JAVASCRIPT code
+# close_value = [3, 1, 4, 5, 6, 6, 5, 6, 7, 8, 7];
+# dema = [2, 4, 3, 2, 5, 6, 6, 8, 4, 5, 6];
+# supertrend = [
+#     "False",
+#     "True",
+#     "True",
+#     "True",
+#     "True",
+#     "False",
+#     "False",
+#     "False",
+#     "True",
+#     "True",
+#     "False",
+# ];
+#
+# flag = true; //initially true; because we have to buy it first
+# //2. once purchased it needs to be toggled to false (Don't buy)
+# //3. if FALSE; indicated it needs to be SELL
+# //4. Once SOLD, which will toggle to TRUE, indicates BUY signal
+#
+# for (let index = 0; index < close_value.length; index++) {
+# if (
+#         close_value[index] > dema[index] &&
+#         supertrend[index] == 'True' &&
+#         flag == true
+# ) {
+# console.log("BUY");
+# flag = false;
+#
+# } else if (supertrend[index] == 'False' && flag == false) {
+# console.log("SELL");
+# flag = true;
+# }
+# }
+
+# close_value = [3, 1, 4, 5, 6, 6, 5, 6, 7, 8, 7]
+# dema = [2, 4, 3, 2, 5, 6, 6, 8, 4, 5, 6]
+# supertrend = [False, True, True, True, True, False, False, False, True, True, False]
+
+
+# for i in range(len(CLOSE_VALUES)):
+#     if CLOSE_VALUES[i] > repository.get_dema(repository.list_to_numpy_array(CLOSE_VALUES),
+#                                              dema_time_period)[i] and \
+#             repository.get_supertrend(dataframe_data, 3, 3)["Supertrend"][i] and a != 1:
+#         print(f"{i + 1}Buy")
+#         sum_buy += CLOSE_VALUES[i]
+#         close_value_2 = CLOSE_VALUES[i]
+#         a = 1
+#     elif (close_value_2 * (1.02) > CLOSE_VALUES[i] and a == 1):
+#         print(f"{i + 1}Sell")
+#         sum_sell += CLOSE_VALUES[i]
+#         a = 0
